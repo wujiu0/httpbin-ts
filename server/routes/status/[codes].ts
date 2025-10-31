@@ -1,3 +1,5 @@
+import { ASCII_ART } from "../../utils/helpers";
+
 export default defineEventHandler((event) => {
   const codes = getRouterParam(event, "codes");
   
@@ -33,17 +35,7 @@ export default defineEventHandler((event) => {
   // Return empty response for most status codes
   // Special case for 418 (I'm a teapot)
   if (statusCode === 418) {
-    return `
-    -=[ teapot ]=-
-
-       _...._
-     .'  _ _ \`.
-    | ."\` ^ \`". _,
-    \\_;\`"---"\`|//
-      |       ;/
-      \\_     _/
-        \`""""\`
-`;
+    return ASCII_ART;
   }
 
   return "";

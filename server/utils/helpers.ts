@@ -17,6 +17,7 @@ export const ROBOT_TXT = `User-agent: *
 Disallow: /deny
 `;
 
+// Reserved for future use (e.g., /deny endpoint)
 export const ANGRY_ASCII = `
           .-''''''-.
         .' _      _ '.
@@ -29,6 +30,8 @@ export const ANGRY_ASCII = `
           '-......-'
 `;
 
+// Environment-specific headers for request tracing and debugging
+// Reserved for future filtering/inspection features
 export const ENV_HEADERS = [
   "x-varnish",
   "x-request-start",
@@ -77,6 +80,8 @@ export function getUserAgent(event: H3Event): string {
   return (headers["user-agent"] as string) || "";
 }
 
+// Alias for getClientIP - kept for API compatibility with original httpbin
+// The original httpbin uses "origin" terminology in responses
 export function getOrigin(event: H3Event): string {
   return getClientIP(event);
 }
