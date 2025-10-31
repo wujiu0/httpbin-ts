@@ -9,3 +9,10 @@ dist/
 *.egg-info
 *.swp
 .vscode/
+
+# Node.js / TypeScript
+node_modules/
+.output/
+.nitro/
+*.log
+package-lock.json

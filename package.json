@@ -1,0 +1,24 @@
+{
+  "name": "httpbin-ts",
+  "version": "1.0.0",
+  "description": "HTTP Request & Response Service in TypeScript with Nitro",
+  "type": "module",
+  "scripts": {
+    "dev": "nitro dev",
+    "build": "nitro build",
+    "preview": "node .output/server/index.mjs",
+    "prepare": "nitro prepare"
+  },
+  "keywords": ["httpbin", "http", "testing", "api"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "h3": "^2.0.1-rc.5",
+    "nitropack": "^2.12.9"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
